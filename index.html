@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="https://www.clickpost.ai/hubfs/featured%20images/Updated%20blog%20banner%20images%20Mar%2022/Best-QR-Code-Generator-Apps-for-Shopify.webp">
+    <script src="script.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+</head>
+<body>
+    <div id="backg">
+        <div id="circle"></div>
+        <div id="circle2"></div>
+        <div id="circle3"></div>
+    </div>
+    <div class="main">
+        <header>
+            <!-- <h1>QR Code Generator</h1> -->
+        </header>
+        <form id="form">
+            <div id="left">
+                <input id="url" required type="url" placeholder="Enter the URL">
+                <p>Your QR code will be generated</p>
+                <button id="btn" type="submit">Generate</button>
+            </div>
+            <div id="right">
+                <div id="qrcode"></div>
+
+                <div id="sizedrop">
+                    <p>Select size </p>
+                    <select id="size">
+                        <option value="100" selected>100x100</option>
+                        <option value="150" >150x150</option>
+                        <option value="200" >200x200</option>
+                    </select>
+                </div>
+                <div class="color-input">
+                    <p>Choose color</p>
+                    <div id="forg">
+                        <!-- <label for="f-color">Foreground</label> -->
+                        <label><input type="color" id="f-color" value="#000000" ></label>
+                        <p>Primary</p>
+                    </div>
+
+                    <div id="bacg">
+                        <!-- <label for="b-color">Background</label> -->
+                        <input type="color" id="b-color" value="#ffffff" >
+                        <p>Secondary</p>
+                    </div>
+                </div>
+                <div id="down"></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
